@@ -1,0 +1,14 @@
+<section class="article-meta article-footer">
+  <h3>{{ "If you enjoyed the post..." }}</h3>
+  <h4>{{ "...you can take direct economical action:" }}</h4>
+  <p>XMR: "XMR-ADDRESS-HERE"</p>
+  <p>PAYNYM: "PAYNYM-ADDRESS-HERE"</p>
+  <section class="article-meta">
+  {{ $imagexmr := resources.Get "images/xmr-logo.png" }}
+  {{ $imagexmr := $imagexmr.Resize "150x150 WebP" }}
+  <img style="position: left" src="{{ $imagexmr.RelPermalink }}" />
+  {{ $imagebtc := resources.Get "images/btc-logo.png" }}
+  {{ $imagebtc := $imagebtc.Resize "150x150 WebP" }}
+  <img style="position: right" src="{{ $imagebtc.RelPermalink }}" />
+  </section>
+</section>
