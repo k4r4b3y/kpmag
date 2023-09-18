@@ -49,7 +49,17 @@
     function loadComments() {
       let commentsWrapper = document.getElementById("comments-wrapper");
       document.getElementById("load-comment").innerHTML = "Loading";
-      fetch('https://{{ .host }}/api/v1/statuses/{{ .id }}/context')
+
+      let protocol = window.location.protocol;
+      let url;
+      
+      if (protocol === "https:") {
+        url = "https://" + "{{ .host }}";
+      } else if (protocol === "http:") {
+        url = "http://" + "{{ .hostonion }}";
+      }
+
+      fetch(url + '/api/v1/statuses/{{ .id }}/context')
         .then(function(response) {
           return response.json();
         })
