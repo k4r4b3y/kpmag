@@ -2,6 +2,8 @@
 <section id="comments" class="article-content">
   <h2>Comments</h2>
   <p>Leave a comment from the fediverse by responding to this <a id="post-link" href="#">post</a>.</p>
+
+  <!-- Determine if the visitor is coming from the onion URL or the clearnet one -->
   <script type="text/javascript">
     let protocol = window.location.protocol;
     let my_url;
@@ -14,11 +16,12 @@
     // Set the href attribute of the anchor tag
     document.getElementById('post-link').href = my_url + "/post/{{ .id }}";
   </script>
+
   <p id="mastodon-comments-list"><button id="load-comment">Load comments</button></p>
   <div id="comments-wrapper">
-    <noscript><p>Loading comments relies on JavaScript. Try enabling JavaScript and reloading, or visit <a href="https://{{ .host }}/post/{{ .id }}">the original post</a> on Mastodon.</p></noscript>
+    <noscript><p>You need JavaScript to view the comments, or visit <a href="https://{{ .host }}/post/{{ .id }}">this post</a> for seeing comments from the fediverse.</p></noscript>
   </div>
-  <noscript>You need JavaScript to view the comments.</noscript>
+
   <script src="/js/purify.min.js"></script>
   <script type="text/javascript">
     function escapeHtml(unsafe) {
