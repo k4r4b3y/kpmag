@@ -180,54 +180,54 @@ tr:nth-child(even) { background: #eee }
 
 /*Experimental */
 #comments.mastodon-comment {
-    background-color: lightblue;
-    border-radius: 1px;
-    padding: 10px;
-    margin-bottom: 1rem;
+  background-color: lightblue;
+  border-radius: 1px;
+  padding: 10px;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  flex-grow: 2;
+
+  .comment {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
-    flex-direction: column;
+    flex-wrap: true;
+  }
+
+  .comment-avatar img {
+    width: 2rem;
+  }
+
+  .content {
     flex-grow: 2;
+  }
 
-    .comment {
+  .comment-author {
+    display: flex;
+    flex-direction: column;
+
+    &-name {
+      font-weight: bold;
+      a {
         display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        flex-wrap: true;
+        align-items: center;
+      }
     }
 
-    .comment-avatar img {
-        width: 2rem;
+    &-date {
+      margin-left: auto;
     }
+  }
 
-    .content {
-        flex-grow: 2;
-    }
-
-    .comment-author {
-        display: flex;
-        flex-direction: column;
-
-        &-name {
-            font-weight: bold;
-            a {
-                display: flex;
-                align-items: center;
-            }
-        }
-
-        &-date {
-            margin-left: auto;
-        }
-    }
-
-    .disabled {
-        color: var(--accent-color)
-    }
+  .disabled {
+    color: var(--accent-color)
+  }
 }
 
 .mastodon-comment-content p:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .mastodon {
