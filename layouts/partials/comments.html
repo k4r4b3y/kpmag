@@ -2,7 +2,6 @@
 <section id="comments" class="article-content">
   <h2>Comments</h2>
   <p>Leave a comment from the fediverse by responding to this <a id="post-link" href="#">post</a>.</p>
-
   <!-- Determine if the visitor is coming from the onion URL or the clearnet one -->
   <script type="text/javascript">
     let protocol = window.location.protocol;
@@ -199,6 +198,7 @@
           }
         });
       }
+      // Display or not, the "Load Comments" button
       document.addEventListener("DOMContentLoaded", function() {
         let loadCommentButton = document.getElementById("load-comment");
         let protocol = window.location.protocol;
