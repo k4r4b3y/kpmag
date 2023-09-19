@@ -1,5 +1,7 @@
 {{ with .Params.comments }}
 <section id="comments" class="article-content">
+  <h2>Comments</h2>
+  <p>Leave a comment from the fediverse by responding to this <a id="post-link" href="#">post</a>.</p>
   <script type="text/javascript">
     let protocol = window.location.protocol;
     let my_url;
@@ -9,13 +11,9 @@
     } else if (protocol === "http:") {
       my_url = "http://" + "{{ .hostonion }}";
     }
-
     // Set the href attribute of the anchor tag
     document.getElementById('post-link').href = my_url + "/post/{{ .id }}";
   </script>
-  <h2>Comments</h2>
-  <p>Leave a comment from the fediverse by responding to this <a id="post-link" href="#">post</a>.</p>
-
   <p id="mastodon-comments-list"><button id="load-comment">Load comments</button></p>
   <div id="comments-wrapper">
     <noscript><p>Loading comments relies on JavaScript. Try enabling JavaScript and reloading, or visit <a href="https://{{ .host }}/post/{{ .id }}">the original post</a> on Mastodon.</p></noscript>
