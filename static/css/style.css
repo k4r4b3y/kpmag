@@ -186,7 +186,7 @@ tr:nth-child(even) { background: #eee }
 }
 
 /*Experimental */
-.mastodon-comment {
+#comments.mastodon-comment {
     background-color: var(--body-background);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
@@ -203,8 +203,8 @@ tr:nth-child(even) { background: #eee }
         flex-wrap: true;
     }
 
-    .avatar img {
-        width: 1rem;
+    .comment-avatar img {
+        width: 6rem;
     }
 
     .content {
