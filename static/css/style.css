@@ -197,7 +197,7 @@ tr:nth-child(even) { background: #eee }
     }
 
     .comment-avatar img {
-        width: 6rem;
+        width: 2rem;
     }
 
     .content {
