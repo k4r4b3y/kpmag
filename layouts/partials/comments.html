@@ -1,7 +1,20 @@
 {{ with .Params.comments }}
 <section id="comments" class="article-content">
+  <script type="text/javascript">
+    let protocol = window.location.protocol;
+    let my_url;
+    
+    if (protocol === "https:") {
+      my_url = "https://" + "{{ .host }}";
+    } else if (protocol === "http:") {
+      my_url = "http://" + "{{ .hostonion }}";
+    }
+
+    // Set the href attribute of the anchor tag
+    document.getElementById('post-link').href = my_url + "/post/{{ .id }}";
+  </script>
   <h2>Comments</h2>
-  <p>Leave a comment from the fediverse by responding to this <a href="https://{{ .host }}/post/{{ .id }}">post</a>.</p>
+  <p>Leave a comment from the fediverse by responding to this <a id="post-link" href="#">post</a>.</p>
 
   <p id="mastodon-comments-list"><button id="load-comment">Load comments</button></p>
   <div id="comments-wrapper">
@@ -48,17 +61,7 @@
     function loadComments() {
       let commentsWrapper = document.getElementById("comments-wrapper");
       document.getElementById("load-comment").innerHTML = "Loading";
-
-      let protocol = window.location.protocol;
-      let url;
-      
-      if (protocol === "https:") {
-        url = "https://" + "{{ .host }}";
-      } else if (protocol === "http:") {
-        url = "http://" + "{{ .hostonion }}";
-      }
-
-      fetch(url + '/api/v1/statuses/{{ .id }}/context')
+      fetch('https://{{ .host }}/api/v1/statuses/{{ .id }}/context')
         .then(function(response) {
           return response.json();
         })
