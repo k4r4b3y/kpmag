@@ -203,7 +203,7 @@ tr:nth-child(even) { background: #eee }
         flex-wrap: true;
     }
 
-    .comment-avatar img {
+    .avatar img {
         width: 1rem;
     }
 
