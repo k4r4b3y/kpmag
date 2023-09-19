@@ -1,8 +1,7 @@
 {{ with .Params.comments }}
 <section id="comments" class="article-content">
   <h2>Comments</h2>
-  <p>With an account on the Fediverse or Mastodon, you can respond to this <a href="https://{{ .host }}/post/{{ .id }}">post</a>. Since Mastodon is decentralized, you can use your existing account hosted by another Mastodon server or compatible platform if you don't have an account on this one. Known non-private replies are displayed below.</p>
-  <p>Learn how this is implemented <a class="link" href="/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/">here.</a></p>
+  <p>Leave a comment from the fediverse by responding to this <a href="https://{{ .host }}/post/{{ .id }}">post</a>.</p>
 
   <p id="mastodon-comments-list"><button id="load-comment">Load comments</button></p>
   <div id="comments-wrapper">
@@ -196,7 +195,18 @@
           }
         });
       }
-      document.getElementById("load-comment").addEventListener("click", loadComments);
+      document.addEventListener("DOMContentLoaded", function() {
+        let loadCommentButton = document.getElementById("load-comment");
+        let protocol = window.location.protocol;
+
+        if (protocol === "https:") {
+          loadCommentButton.style.display = "block";
+        } else if (protocol === "http:") {
+          loadCommentButton.style.display = "none";
+        }
+
+        loadCommentButton.addEventListener("click", loadComments);
+      });
   </script>
 </section>
 {{ end }}
