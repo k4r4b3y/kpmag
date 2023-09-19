@@ -1,3 +1,10 @@
+:root {
+ --body-background: #ffffff;
+ --card-border-radius: 4px;
+ --card-padding: 1rem;
+}
+
+
 body {
   margin: 0;
   line-height: 1.5em;
