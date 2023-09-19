@@ -1,10 +1,3 @@
-:root {
- --body-background: #ffffff;
- --card-border-radius: 4px;
- --card-padding: 1rem;
-}
-
-
 body {
   margin: 0;
   line-height: 1.5em;
@@ -187,9 +180,9 @@ tr:nth-child(even) { background: #eee }
 
 /*Experimental */
 #comments.mastodon-comment {
-    background-color: var(--body-background);
-    border-radius: var(--card-border-radius);
-    padding: var(--card-padding);
+    background-color: lightblue;
+    border-radius: 1px;
+    padding: 10px;
     margin-bottom: 1rem;
     display: flex;
     gap: 1rem;
