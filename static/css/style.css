@@ -240,12 +240,14 @@ tr:nth-child(even) { background: #eee }
   --dlg-outline-c: #00D9F5;
 }
 */
+small,
 section#comments .comment footer,
 section#comments .comment time,
 aside p {
  font-size:smaller;
  opacity:.9
 }
+/*
 .button,
 button {
  padding:1rem;
@@ -257,6 +259,7 @@ button {
 button:hover {
  background-color:var(--body-background)
 }
+*/
 .avatar {
  background-position:50%;
  background-size:cover;
