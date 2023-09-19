@@ -240,6 +240,32 @@ tr:nth-child(even) { background: #eee }
   --dlg-outline-c: #00D9F5;
 }
 */
+small,
+section#comments .comment footer,
+section#comments .comment time,
+aside p {
+ font-size:smaller;
+ opacity:.9
+}
+.button,
+button {
+ padding:1rem;
+ border-radius:4px;
+ border-width:0;
+ background-color:var(--code-background-color)
+}
+.button:hover,
+button:hover {
+ background-color:var(--body-background)
+}
+.avatar {
+ background-position:50%;
+ background-size:cover;
+ border-radius:50%;
+ box-shadow:0 0 2px var(--neutral);
+ margin:0;
+ overflow:hidden
+}
 section#comments #comments-wrapper {
  margin:1.5em 0;
  padding:0 var(--card-padding)
