@@ -16,5 +16,5 @@ comments:
   id: 
 donations:
   address: ""
-  qr-code: xmr_addy_qr.png
+  qrcode: xmr_addy_qr.png
 ---
