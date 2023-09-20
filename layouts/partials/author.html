@@ -3,8 +3,11 @@
   <h4>{{ "...take a direct economical action:" }}</h4>
   <p>XMR: <pre><code>{{ .Params.donations.address }}</pre></code></p>
   <section class="article-meta">
-  {{ $imagexmr := .Page.Resources.GetMatch .Params.donations.qrcode }}
-  {{ $imagexmr := $imagexmr.Resize "150x150 WebP" }}
-  <img style="position: left" src="{{ $imagexmr.RelPermalink }}" />
+  {{ with .Page.Resources.GetMatch .Params.donations.qr-code }}
+    {{ $imagexmr := .Resize "150x150 WebP" }}
+    <img style="position: left" src="{{ $imagexmr.RelPermalink }}" />
+  {{ else }}
+    <p>No QR code image found.</p>
+  {{ end }}
   </section>
-</section>
+
