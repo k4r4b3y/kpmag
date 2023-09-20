@@ -178,68 +178,6 @@ tr:nth-child(even) { background: #eee }
   margin-left: 0;
 }
 
-
-/*Experimental 
-
-#comments.mastodon-comment {
-  background-color: lightblue;
-  border-radius: 1px;
-  padding: 10px;
-  margin-bottom: 1rem;
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  flex-grow: 2;
-
-  .comment {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    flex-wrap: true;
-  }
-
-  .comment-avatar img {
-    width: 2rem;
-  }
-
-  .content {
-    flex-grow: 2;
-  }
-
-  .comment-author {
-    display: flex;
-    flex-direction: column;
-
-    &-name {
-      font-weight: bold;
-      a {
-        display: flex;
-        align-items: center;
-      }
-    }
-
-    &-date {
-      margin-left: auto;
-    }
-  }
-
-  .disabled {
-    color: var(--accent-color)
-  }
-}
-
-.mastodon-comment-content p:first-child {
-  margin-top: 0;
-}
-
-.mastodon {
-  --dlg-bg: #282c37;
-  --dlg-w: 600px;
-  --dlg-color: #9baec8;
-  --dlg-button-p: 0.75em 2em;
-  --dlg-outline-c: #00D9F5;
-}
-*/
 small,
 section#comments .comment footer,
 section#comments .comment time,
@@ -247,19 +185,7 @@ aside p {
  font-size:smaller;
  opacity:.9
 }
-/*
-.button,
-button {
- padding:1rem;
- border-radius:4px;
- border-width:0;
- background-color:var(--code-background-color)
-}
-.button:hover,
-button:hover {
- background-color:var(--body-background)
-}
-*/
+
 .avatar {
  background-position:50%;
  background-size:cover;
