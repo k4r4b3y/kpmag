@@ -75,13 +75,17 @@
             commentsWrapper.innerHTML = "";
 
             descendants.forEach(function(status) {
-                console.log(descendants)
-              if( status.account.display_name.length > 0 ) {
-                status.account.display_name = escapeHtml(status.account.display_name);
-                status.account.display_name = emojify(status.account.display_name, status.account.emojis);
+              console.log(descendants)
+              if(status.account.display_name !== null) {
+                if( status.account.display_name.length > 0 ) {
+                  status.account.display_name = escapeHtml(status.account.display_name);
+                  status.account.display_name = emojify(status.account.display_name, status.account.emojis);
+                } else {
+                  status.account.display_name = status.account.username;
+                };
               } else {
                 status.account.display_name = status.account.username;
-              };
+              }
 
               let instance = "";
               if( status.account.acct.includes("@") ) {
