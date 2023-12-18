@@ -1,13 +1,13 @@
 body {
-  font-family: Optima, 'Lucida Sans', Calibri, Candara, Arial, 'source-han-serif-sc', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif TW', 'Source Han Serif', 'Noto Serif CJK SC', 'Songti SC', 'Microsoft YaHei', sans-serif;
+ font-family: 'Open Sans', Arial, sans-serif;
 }
 blockquote {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, 'STKaiti', 'KaiTi', '楷体', 'SimKai', 'DFKai-SB', 'NSimSun', serif;
+ font-family: 'Gentium Basic', 'Times New Roman', serif;
 }
 code {
-  font-family: "Lucida Console", 'Andale Mono', 'STKaiti', 'KaiTi', 'SimKai', monospace;
+ font-family: 'Courier New', 'Lucida Console', monospace;
 }
 pre code {
-  font-family: "Lucida Console", Monaco, 'STKaiti', 'KaiTi', 'SimKai', monospace;
-  font-size: .85em;
+ font-family: 'Courier New', 'Lucida Console', monospace;
+ font-size: .85em;
 }
