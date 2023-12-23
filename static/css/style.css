@@ -306,3 +306,9 @@ section#comments .comment .invisible {
 section#comments .comment .ellipsis::after {
  content:"…"
 }
+/* Centered images */
+img {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
